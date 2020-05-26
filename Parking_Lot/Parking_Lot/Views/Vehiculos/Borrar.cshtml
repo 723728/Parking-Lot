@@ -1,0 +1,34 @@
+﻿@{
+    <link rel="icon" type="image/png" href="~/icon.png" />
+    Layout = null;
+}
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Color</th>
+                <th>Descripcion</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tema in Model)
+            {
+                <tr>
+                    <td>@tema.Tipo</td>
+                    <td>@tema.Color</td>
+                    <td>@tema.Descripcion</td>
+                    <td>@tema.Marca</td>
+                    <td>@tema.Modelo</td>
+                    <td>
+                        <form action="/Vehiculos/Borrar?id=@tema.Id" method="post">
+                            <button>Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,42 @@
+﻿@{
+    <link rel="icon" type="image/png" href="~/icon.png" />
+    Layout = null;
+    <link rel="stylesheet" type="text/css" href="~/Clase7.css" />
+}
+    
+    <table >
+        <thead>
+            <tr>
+                <th>Tipo</th>
+                <th>Color</th>
+                <th>Descripcion</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th colspan="2">
+                    <a href="/Vehiculos/Crear">
+                        <p>Crear Vehiculos</p>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tema in Model)
+            {
+                <tr>
+                    <td>@tema.Tipo</td>
+                    <td><input type="color" value=@tema.Color /></td>
+                    <td>@tema.Descripcion</td>
+                    <td>@tema.Marca</td>
+                    <td>@tema.Modelo</td>
+                    <td>
+                        <form action="/Vehiculos/Borrar?id=@tema.Id" method="post">
+                            <button>Eliminar</button>
+                        </form>
+                        <form action="/Vehiculos/Editar?id=@tema.Id" method="post">
+                            <button>Editar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

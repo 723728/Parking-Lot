@@ -1,0 +1,111 @@
+﻿@{
+    Layout = null;
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/Clase6.css" />
+}
+
+<div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+		<div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+        var setting = {"height":900,"width":1800,"zoom":17,"queryString":"Juan Masias 521, Trujillo 13008, Perú","place_id":"EiVKdWFuIE1hc2lhcyA1MjEsIFRydWppbGxvIDEzMDA4LCBQZXJ1IhsSGQoUChIJ012ImnY9rZERkgLiv1gnIgUQiQQ","satellite":false,"centerCoord":[-8.119304452265588,-79.03521765],"lang":"es","cityUrl":"/peru/trujillo-11831","cityAnchorText":"Mapa de Trujillo, La Libertad, Perú","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"216696"};
+        var d = document;
+        var s = d.createElement('script');
+        s.src = 'https://1map.com/js/script-for-user.js?embed_id=216696';
+        s.async = true;
+        s.onload = function (e) {
+          window.OneMap.initMap(setting)
+        };
+        var to = d.getElementsByTagName('script')[0];
+        to.parentNode.insertBefore(s, to);
+      })();</script>
+ </div>
+<div class="panel btn-pref btn-group btn-group-justified ">
+    <div class="tab-content">
+        <div class="tab-pane panel  active" id="tab1">
+            <form role="form" class="form-inline">
+                <center>
+                    <div id="Contenido"></div>
+                </center>
+            </form>
+        </div>
+        <div class="tab-pane panel " id="tab2">
+            <form role="form" class="form-inline">
+                <h2> ... Tab 1...</h2>
+            </form>
+        </div>
+        <div class="tab-pane panel " id="tab3">
+            <form role="form" class="form-inline">
+                <h2> ... Tab 1...</h2>
+            </form>
+        </div>
+        <div class="tab-pane panel fade in " id="tab4">
+            <form role="form" class="form-inline">
+                <h2> <br> ... Tab 4</h2>
+            </form>
+        </div>
+        <div class="tab-pane panel fade in " id="tab5">
+            <form role="form" class="form-inline">
+                <h2> <br> ... Tab 5</h2>
+            </form>
+        </div>
+        <div class="tab-pane panel fade in " id="tab6">
+            <form role="form" class="form-inline">
+                <h2> <br> ... Tab 6</h2>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="tabnav">
+        <div class="btn-group btn-group-justified ">
+
+            <div class="btn-group  " role="group">
+                <button id="b1" type="button" class="btn btn-nav" href="#tab1" data-toggle="tab">
+                    <div class="visible">  Perfil  <span class="glyphicon glyphicon-user" aria-hidden="true"> </span></div>
+                </button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="b2" type="button" class="btn btn-nav" href="#tab2" data-toggle="tab">
+                    <div class="visible"> Ubicación  <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+                </button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="b3" type="button" class="btn btn-nav" href="#tab3" data-toggle="tab">
+                    <div class="visible"> Aparacamientos <span class="glyphicon glyphicon-road" aria-hidden="true"></span></div>
+                </button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="b4" type="button" class="btn btn-nav" href="#tab4" data-toggle="tab">
+
+                    <div class="visible"> Medio de Pago <span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span></div>
+                </button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="b5" type="button" class="btn btn-nav" href="#tab5" data-toggle="tab">
+                    <div class="visible"> Vehiculos <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span></div>
+                </button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <button id="b6" type="button" class="btn btn-nav" href="#tab6" data-toggle="tab">
+                    <div class="visible"> Historial <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></div>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Index.js"></script>
+
+
+

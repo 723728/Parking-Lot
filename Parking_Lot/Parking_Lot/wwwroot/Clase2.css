@@ -1,0 +1,133 @@
+﻿body 
+{
+    background-image: url('http://getwallpapers.com/wallpaper/full/3/5/7/170948.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Lobster';
+}
+
+.footer 
+{
+    position: fixed;
+    left: 0;
+    padding-top: 5px;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family:Arial;
+    text-align:right
+}
+
+.fancy-monk h1 {
+    position: relative;
+    top: 5%;
+}
+
+.topnav ul {
+    border-bottom: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Abril Fatface', cursive;
+    max-height: 70px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+    .topnav ul li {
+        float: left;
+    }
+
+        .topnav ul li a {
+            font-size: 18px;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 23px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+.span-logo img {
+    display: inline-block;
+    vertical-align: top;
+    height: 75px;
+    min-height: 75px;
+    width: 75px;
+    min-width: 75px;
+    float: left;
+    padding: 0px;
+}
+
+.span-logo p {
+    font-size: 16px;
+    text-decoration: none;
+    color: #f2f2f2;
+    float: left;
+    padding: 15px 0px;
+}
+
+.topnav ul li a:hover {
+    background-color: brown;
+}
+
+.topnav ul li.icon {
+    display: none;
+}
+
+
+.fancy-monk {
+    font-size: 50px;
+    color: #EFEBE9;
+    margin: 0px;
+    text-align: center;
+    height: 600px;
+    min-height: 400px;
+    font-family: 'Lobster', cursive;
+}
+
+    .fancy-monk h1 {
+        font-size: 100px;
+        margin: 0;
+        padding-top: 150px;
+        font-family: 'Lobster', cursive;
+    }
+
+
+.btn-danger {
+    background: #ce1e42;
+    width: 300px;
+}
+
+.signinup {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -300px;
+}
+
+    .signinup input {
+        font-size: 20px;
+    }
+
+.text1 {
+    position: fixed;
+    top: 70%;
+    left: 18%;
+}
+
+.text2 {
+    position: fixed;
+    top: 70%;
+    right: 18%;
+}

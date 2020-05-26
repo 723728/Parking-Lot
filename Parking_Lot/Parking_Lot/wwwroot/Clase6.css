@@ -1,0 +1,90 @@
+﻿.tab-content {
+    position: fixed;
+    left: 0;
+    bottom: 2%;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    color:black;
+}
+.tabnav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.btn-nav {
+    color: white;
+    background-color: #000;
+    border: 2px solid #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .btn-nav:hover {
+        color: white;
+        cursor: pointer;
+        -webkit-transition: color 1s;
+        transition: color 1s;
+    }
+
+    .btn-nav.active {
+        padding:initial;
+        border-top: 2px solid #1dcaff;
+        border-bottom: 2px solid #1dcaff;
+        border-left: 2px solid #1dcaff;
+        border-right: 2px solid #1dcaff;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -webkit-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+        -moz-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+        -ms-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+        -o-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+        transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+        -webkit-animation: pulsate 1.2s linear infinite;
+        animation: pulsate 1.2s linear infinite;
+    }
+
+    .btn-nav .glyphicon {
+        padding-top: 8px;
+        font-size: 30px;
+    }
+
+    .btn-nav.active p {
+        margin-bottom: 8px;
+    }
+
+@-webkit-keyframes pulsate {
+    50% {
+        color: #000;
+    }
+}
+
+@keyframes pulsate {
+    50% {
+        color: #000;
+    }
+}
+
+@media (max-width: 100%) {
+    .btn-group {
+        display: block !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 100%) {
+    .btn-nav .glyphicon {
+        padding-top: 12px;
+        font-size: 26px;
+    }
+}

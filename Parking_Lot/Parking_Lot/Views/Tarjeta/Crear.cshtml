@@ -1,0 +1,42 @@
+﻿@{
+    <link rel="icon" type="image/png" href="~/icon.png" />
+    Layout = null;
+    <link rel="stylesheet" type="text/css" href="~/Clase7.css" />
+}
+
+<form action="/Tarjeta/Crear" method="post">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Numero</th>
+                <th>Fecha</th>
+                <th>CV2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <label for="inputNumero">Nombre del la Tarjeta : </label>
+                    <input type="text" maxlength="30" name="Nombre">
+                </td>
+
+                <td>
+                    <label for="inputNumero">Número Tarjeta : </label>
+                    <input type="text" maxlength="16" name="Numero">
+                </td>
+                
+                <td>
+                    <input type="date" name="Fecha" />
+                    @Html.ValidationMessage("Fecha")
+                </td>
+                
+                <td>
+                    <input type="text" maxlength="3" name="CV2">
+                    @Html.ValidationMessage("CV2")
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button> Guardar Tarjeta </button>
+</form>
