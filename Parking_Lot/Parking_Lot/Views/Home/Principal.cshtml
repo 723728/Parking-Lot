@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Principal";
+}
+<div id="imgLOAD" style="text-align:center;">
+        <img id="estirada" style="position: absolute; top: 0; left: 0; width: 100%; height: 100% ;z-index: 1;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.gifer.com%2F74pZ.gif&f=1&nofb=1" />
+</div>
+
+<div class="fancy-monk">
+    <div class="row">
+        <div id="botones">
+            <div class="text-center">
+                <h1>Parking Lot</h1>
+            </div>
+            <div class="col-xs-4 text-center">
+                <div style="width: auto; height: 100px">
+                    <button class="btn btn-danger" id="Iniciar">Iniciar Sessión</button>
+                </div>
+                <div style="width: auto; height:100px">
+                    <button class="btn btn-danger" id="Crear">Crear cuenta</button>
+                </div>
+            </div>
+            <div class="col-xs-8">
+                <div class="text-center text-justify" id="Recuadro">
+                    <p>
+                        Para darte seguridad a ti y especialmente a tu vehiculo llega Parking Lot
+                        una web que te ayudara a encontrar un estacionamiento con lugares disponibles
+                        y te guiara hasta el.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+        window.onload = detectarCarga;
+        function detectarCarga() {
+            document.getElementById("imgLOAD").style.display = "none";
+        }
+</script>

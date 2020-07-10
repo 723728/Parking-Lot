@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<div>
+    <label id="nombre" style="font-size:20px">@Model.FirstName @Model.LastName</label>
+    <hr />
+    <div class="datos">
+        <label>Correo electronico: @Model.Email</label>
+    </div>
+    <div class="datos">
+        <label>Fecha Nacimiento: @Model.Date.ToString("dd-MM-yyyy")</label>
+    </div>
+    
+    <div class="datos">
+        <label>Genero: @Model.Genero</label>
+    </div>
+</div>

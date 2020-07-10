@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = null;
+}
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#reservastab" aria-controls="home" role="tab" data-toggle="tab">Reservas</a></li>
+        <li role="presentation"><a href="#pagostab" aria-controls="profile" role="tab" data-toggle="tab">Pagos</a></li>
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="reservastab">
+            <table style="text-align:justify;">
+                <thead>
+                    <tr>
+                        <th class="col-md-4">Estacionamiento</th>
+                        <th class="col-md-4">Horas reservadas</th>
+                        <th class="col-md-4">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var reserva in ViewBag.Reservas)
+                    {
+                        <tr>
+                            <td class="col-md-4">@reserva.IdEstacionamiento</td>
+                            <td class="col-md-4">@reserva.NHora</td>
+                            <td class="col-md-4">@reserva.Fecha.ToString("dd-MM-yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="pagostab">
+            <table style="text-align: justify;">
+                <thead>
+                    <tr>
+                        <th class="col-md-3">Estacionamiento</th>
+                        <th class="col-md-3">Fecha</th>
+                        <th class="col-md-3">Horas</th>
+                        <th class="col-md-3">Tarjeta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pago in ViewBag.Pagos)
+                    {
+                        <tr>
+                            <td class="col-md-3">@pago.IdEstacionamiento</td>
+                            <td class="col-md-3">@pago.Fecha.ToString("dd-MM-yyyy")</td>
+                            <td class="col-md-3">@pago.NHoras</td>
+                            <td class="col-md-3">@pago.IdTarjeta</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

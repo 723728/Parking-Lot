@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div style="text-align: justify;">
+    <table>
+        <thead>
+            <tr>
+                <th class="col-md-4">Nombre</th>
+                <th class="col-md-6">Numero</th>
+                <th class="col-md-2">CV2</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var tarjeta in Model)
+            {
+                <tr>
+                    <td class="col-md-4">@tarjeta.Nombre</td>
+                    <td class="col-md-6">@tarjeta.Numero</td>
+                    <td class="col-md-2">@tarjeta.CV2</td>
+                </tr>
+            }
+        </tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</div>
