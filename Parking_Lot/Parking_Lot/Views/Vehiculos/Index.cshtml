@@ -4,34 +4,41 @@
 }
 
 <div>
-    <table style="text-align:justify;">
-        <thead>
-            <tr>
-                <th class="col-md-2">Tipo</th>
-                <th class="col-md-2">Color</th>
-                <th class="col-md-2">Descripcion</th>
-                <th class="col-md-2">Marca</th>
-                <th class="col-md-2">Modelo</th>
-                <th class="col-md-2"></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var vehiculo in Model)
-            {
-                <tr>
-                    <td class="col-md-2"> @vehiculo.Tipo</td>
-                    <td class="col-md-2"><input type="Color" disabled value="@vehiculo.Color" /></td>
-                    <td class="col-md-2">@vehiculo.Descripcion</td>
-                    <td class="col-md-2">@vehiculo.Marca</td>
-                    <td class="col-md-2">@vehiculo.Modelo</td>
-                    <td class="col-md-2"><a href="/Vehiculos/Borrar?id=@vehiculo.Id" class="btn btn-bot">Borrar</a></td>
-                </tr>
-            }
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
+    @foreach (var vehiculo in Model) 
+    { 
         
-    </table>
+        <div class="row">
+            <div class="col-md-2">
+                <label>
+                    Tipo: @vehiculo.Tipo
+                </label>
+            </div>
+            <div class="col-md-2">
+                <label>
+                    Color:
+                    <input type="Color" disabled value="@vehiculo.Color" />
+                </label>
+            </div>
+            <div class="col-md-2">
+                <label>
+                    Descripcion: @vehiculo.Descripcion
+                </label>
+            </div>
+            <div class="col-md-2">
+                <label>
+                    Marca: @vehiculo.Marca
+                </label>
+            </div>
+            <div class="col-md-2">
+                <label>
+                    Modelo: @vehiculo.Modelo
+                </label>
+            </div>
+            <div class="col-md-2">
+                <a href="/Vehiculos/Borrar?id=@vehiculo.Id" class="btn">Borrar</a>
 
+            </div>
+
+        </div>
+    }
 </div>

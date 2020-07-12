@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Parking_Lot.DB;
@@ -11,7 +10,6 @@ using Parking_Lot.Models;
 
 namespace Parking_Lot.Controllers
 {
-    [Authorize]
     public class HistorialController : Controller
     {
         private AppDbContext context;

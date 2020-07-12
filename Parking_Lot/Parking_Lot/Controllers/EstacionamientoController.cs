@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Parking_Lot.DB;
 using Parking_Lot.Extensions;
@@ -11,14 +10,13 @@ using Parking_Lot.Models;
 
 namespace Parking_Lot.Controllers
 {
-    [Authorize]
     public class EstacionamientoController : Controller
     {
-        
         private AppDbContext context;
         public EstacionamientoController() {
             context = new AppDbContext();
         }
+
         public IActionResult Index()
         {
             var usserLogged = HttpContext.Session.Get<User>("SessionLoggedUser");
@@ -35,12 +33,14 @@ namespace Parking_Lot.Controllers
             context.SaveChanges();
             return RedirectToAction("Index","Menu");
         }
+        public static DateTime Today { get; }
         [HttpPost]
         public IActionResult Pagar(Pago pago)
         {
+            DateTime thisDay = DateTime.Today;
             var usserLogged = HttpContext.Session.Get<User>("SessionLoggedUser");
             pago.IdUser = usserLogged.Id;
-            pago.Fecha = DateTime.Now;
+            pago.Fecha = thisDay.ToString();
             if (pago.IdTarjeta==0 || pago.NHoras==0) {
                 return RedirectToAction("Index", "Menu");
             }

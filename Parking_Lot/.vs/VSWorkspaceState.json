@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Parking_Lot"
+    "\\Parking_Lot",
+    "\\Parking_Lot\\bin"
   ],
   "SelectedNode": "\\Parking_Lot.sln",
   "PreviewInSolutionExplorer": false

@@ -9,6 +9,7 @@ using Parking_Lot.Models;
 
 namespace Parking_Lot.Controllers
 {
+    [Authorize]
     public class MenuController : Controller
     {
         private AppDbContext context;

@@ -19,71 +19,36 @@
     <link href="~/Routing/leaflet-routing-machine.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
     <style>
-        a.info {
-            position: relative; /*this is the key*/
-            z-index: 24;
-            color: #000;
-            text-decoration: none
+        #map {
+            top: 0px;
+            bottom: 20px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            height: 700px;
+            /*filter: invert(100%);*/
         }
 
-            a.info:hover {
-                z-index: 25;
-                background-color: #76B7E7
-            }
-
-            a.info span {
-                display: none
-            }
-
-            a.info:hover span { /*the span will display just on :hover state*/
-                display: block;
-                position: absolute;
-                font-weight: bold;
-                top: 0px;
-                left: 20%;
-                width: 100px;
-                margin-left: -125px;
-                border: 1px solid #0cf;
-                background-color: #0099FF;
-                color: #ffffff;
-                text-align: center;
-                z-index: 9999999;
-            }
+        .btn-nav {
+            filter: invert(100%);
+        }
     </style>
-
 </head>
 <body class="menu">
-    
-    <div class="social">
-        <ul>
-            <li>
-                <a href="" id="dato1"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
-                <a href="" id="dato1" style="color:black"> Oscuro <span class="glyphicon glyphicon-adjust"></span></a>
-                <div id=''>
-                    <a href="" class="info"><i class="glyphicon glyphicon-adjust"></i><span>Cambiar Tema</span></a>
-                </div>
-            </li>
-            <li>
-                <div id=''>
-                    <a class="info" href=""><i class="glyphicon glyphicon-cog"></i><span>Configuracion</span></a>
-                </div>
-            </li>
-        </ul>
-    </div>
     <div class="body-content" id="map">
 
     </div>
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="btn-group btn-group-justified ">
 
-            <div class="btn-group" role="group" id=''>
+            <div class="btn-group  " role="group">
                 <button id="b1" type="button" class="btn btn-nav" href="#tab1" data-toggle="modal" data-target="#perfil">
                     <div class="visible">Perfil<span class="glyphicon glyphicon-user" aria-hidden="true"> </span></div>
                 </button>
             </div>
 
             <div class="btn-group" role="group">
-                <button id="b2" type="button" class="btn btn-nav" onclick="location.reload();">
+                <button id="b2" type="button" class="btn btn-nav"  onclick="location.reload();">
                     <div class="visible">MI ubicación  <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
                 </button>
             </div>
@@ -112,73 +77,50 @@
                     <div class="visible"> Historial <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></div>
                 </button>
             </div>
-
             <div class="btn-group" role="group">
-                <a href="/User/Logout">
-                        <div class="visible"> Historial <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></div>
+                <a type="button" id="cerrar" class="btn btn-nav" href="/User/Logout">
+                    <div class="visible"> Cerrar Sessión <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></div>
                 </a>
             </div>
-
         </div>
     </nav>
     @* Modal perfil *@
     <div class="modal fade" id="perfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px">PERFIL <i class="glyphicon glyphicon-user"></i></h4>
+                    <h4 class="modal-title" id="myModalLabel">Perfil</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="mod1" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
+                    <div id="mod1">
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-bot" id="editarPerfil">Editar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"  id="editarPerfil">Editar</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="configuracion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document" style="width: 700px;">
-            <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px"> APARCAMIENTOS <i class="glyphicon glyphicon-road"></i></h4>
-                </div>
-                <div class="modal-body">
-                    <div id="configuracion" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#estatab" aria-controls="home" role="tab" data-toggle="tab">Estacionamientos</a></li>
-                            <li role="presentation"><a href="#nresertab" aria-controls="profile" role="tab" data-toggle="tab">Reservar</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     @* Modal aparcamientos *@
     <div class="modal fade" id="aparcamiento" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document" style="width: 700px;">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px"> APARCAMIENTOS <i class="glyphicon glyphicon-road"></i></h4>
+                    <h4 class="modal-title" id="myModalLabel">Aparcamientos</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="aparcamientos" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
+                    <div id="aparcamientos">
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -187,18 +129,18 @@
     <div class="modal fade" id="pago" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px"> MEDIO DE PAGO <i class="glyphicon glyphicon-credit-card"></i> </h4>
+                    <h4 class="modal-title" id="myModalLabel">Medios de pago</h4>
                 </div>
                 <div class="modal-body">
-                    <div id="Ubicacion" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
+                    <div id="Ubicacion">
 
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-bot" id="CreaTarjeta">Nueva Tarjeta</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="CreaTarjeta">Nueva Tarjeta</button>
                 </div>
             </div>
         </div>
@@ -207,9 +149,9 @@
     <div class="modal fade" id="vehiculos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px"> VEHICULOS <i class="glyphicon glyphicon-dashboard"></i></h4>
+                    <h4 class="modal-title" id="myModalLabel">Vehiculos</h4>
                 </div>
                 <div class="modal-body">
                     <div id="vehiculosmod" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
@@ -217,8 +159,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-bot" id="nuevoV">Nuevo vehiculo</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="nuevoV">Nuevo vehiculo</button>
                 </div>
             </div>
         </div>
@@ -227,53 +169,20 @@
     <div class="modal fade" id="historial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header" style="text-align: center;">
+                <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel" style="font-size:30px"> HISTORIAL <i class="glyphicon glyphicon-list-alt"></i></h4>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                 </div>
-                <div class="modal-body" id="historialmod" style="max-height: 400px; width:auto;  overflow-y:auto; overflow-x:hidden; text-align: center;">
-
+                <div class="modal-body" id="historialmod">
+                    
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
     
-    <script>
-        var a = 0;
-        window.onload = function () {
-            var observed = document.getElementsByTagName('a');
-
-            for (var i = 0; i < observed.length; i++) {
-                observed[i].addEventListener('click', function (e) {
-                    var e = window.event || e;
-                    
-                    if (e.srcElement.innerText == 'Cambiar Tema' && a == 0) {
-                        $('#map').css({ "filter": "invert(100%) " });
-                        $('.social ul li a').css({ "background": "#636363" });
-                        a = 1;
-                    } else {
-                        if (e.srcElement.innerText == 'Cambiar Tema' && a == 1) {
-                            $('#map').css({ "filter": "invert(0%) " });
-                            $('.social ul li a').css({ "background": "#000" });
-                            a = 0;
-                        }
-                    }
-
-                    if (e.srcElement.innerText == 'Configuración') {
-                        $.ajax({
-                            url: 'User/Index'
-                        }).done(function (x) {
-                            $('#configuracion').html(x);
-                        });
-                    }
-                    if (e.preventDefault) { e.preventDefault() } else { e.returnValue = false }
-                }, false);
-            }
-        }
-    </script>
     <script src="~/js/site.js"></script>
     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>

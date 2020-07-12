@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +11,6 @@ using Parking_Lot.Models;
 
 namespace Parking_Lot.Controllers
 {
-    [Authorize]
     public class TarjetaController : Controller
     {
         private AppDbContext context;
@@ -45,15 +43,15 @@ namespace Parking_Lot.Controllers
 
             return RedirectToAction("Index","Menu");
         }
-        //[HttpGet]
-        //public IActionResult Borrar(int id)
-        //{
-        //    var productoDb = context.Tarjetas.Where(o => o.Id == id).First();
+        [HttpPost]
+        public IActionResult Borrar(int id)
+        {
+            var productoDb = context.Tarjetas.Where(o => o.Id == id).First();
 
-        //    context.Tarjetas.Remove(productoDb);
-        //    context.SaveChanges();
+            context.Tarjetas.Remove(productoDb);
+            context.SaveChanges();
 
-        //    return RedirectToAction("Index", "Menu");
-        //}
+            return RedirectToAction("Final", "Inicio");
+        }
     }
 }

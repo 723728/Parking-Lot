@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Parking_Lot.DB;
@@ -11,7 +10,6 @@ using Parking_Lot.Models;
 
 namespace Parking_Lot.Controllers
 {
-    [Authorize]
     public class VehiculosController : Controller
     {
         private AppDbContext context;
@@ -39,7 +37,7 @@ namespace Parking_Lot.Controllers
             context.Vehiculos.Add(vehiculo);
             context.SaveChanges();
 
-            return RedirectToAction("Index","Menu");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ViewResult Editar(int id)

@@ -38,7 +38,7 @@ namespace Parking_Lot.Controllers
             {
                 context.Users.Add(user);
                 context.SaveChanges();
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("Prueba");
             }
             return View();
         }

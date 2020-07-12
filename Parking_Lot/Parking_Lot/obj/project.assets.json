@@ -12708,11 +12708,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CyberCup\\Downloads\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
+      "projectUniqueName": "C:\\Users\\CyberCup\\Desktop\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
       "projectName": "Parking_Lot",
-      "projectPath": "C:\\Users\\CyberCup\\Downloads\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
+      "projectPath": "C:\\Users\\CyberCup\\Desktop\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
       "packagesPath": "C:\\Users\\CyberCup\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CyberCup\\Downloads\\Parking_Lot\\Parking_Lot\\obj\\",
+      "outputPath": "C:\\Users\\CyberCup\\Desktop\\Parking_Lot\\Parking_Lot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

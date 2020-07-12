@@ -10,7 +10,7 @@ namespace Parking_Lot.Models
         public int Id { get; set; }
         public int IdUser { get; set; }
         public int IdEstacionamiento { get; set; }
-        public DateTime Fecha { get; set; }
+        public String Fecha { get; set; }
         public int IdTarjeta { get; set; }
         public int NHoras { get; set; }
     }

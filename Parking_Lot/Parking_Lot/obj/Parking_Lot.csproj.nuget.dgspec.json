@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Diars\\123\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj": {}
+    "D:\\Proyectos web\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj": {}
   },
   "projects": {
-    "D:\\Diars\\123\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj": {
+    "D:\\Proyectos web\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Diars\\123\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
+        "projectUniqueName": "D:\\Proyectos web\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
         "projectName": "Parking_Lot",
-        "projectPath": "D:\\Diars\\123\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
+        "projectPath": "D:\\Proyectos web\\Parking_Lot\\Parking_Lot\\Parking_Lot.csproj",
         "packagesPath": "C:\\Users\\PEDRO RONALDO\\.nuget\\packages\\",
-        "outputPath": "D:\\Diars\\123\\Parking_Lot\\Parking_Lot\\obj\\",
+        "outputPath": "D:\\Proyectos web\\Parking_Lot\\Parking_Lot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PEDRO RONALDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
